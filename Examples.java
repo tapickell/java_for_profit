@@ -58,6 +58,7 @@ public class Examples {
                 }
             }
             Integer largest_value = 1;
+            StringBuilder chars = new StringBuilder();
             for (Map.Entry<String, Integer> entry : hash_map.entrySet())
             {
                 if (entry.getValue() > largest_value) {
@@ -65,6 +66,13 @@ public class Examples {
                 }
             }
 
+            for (Map.Entry<String, Integer> entry : hash_map.entrySet())
+            {
+                if (entry.getValue() == largest_value) {
+                    chars.append(entry.getKey());
+                }
+            }
+            System.out.println(chars + ", " + largest_value);
         }
     }
 }
